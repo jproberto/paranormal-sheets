@@ -1,0 +1,58 @@
+<section class="tab actions" data-group="primary" data-tab="actions">
+
+    <div class="action-section">
+        <h3 class="actor-title-header section-header">
+            <span>{{localize "ps.actions.label"}}</span>
+            <a class="item-control item-create" title="{{localize 'ps.actions.add'}}" data-action="actionCreate">
+                <i class="fas fa-plus"></i>
+            </a>
+        </h3>
+    </div>
+
+    <div class="actions-grid">
+        {{#each actions as |action i|}}
+        <div class="action-card" data-action-index="{{i}}">
+            <div class="card-header">
+                <h4 class="action-name">{{action.name}}</h4>
+                <span class="action-type">{{#if action.type}}{{lookup ../actionTypes action.type}}{{/if}}</span>
+            </div>
+
+            <div class="card-details">
+                {{#if action.attack.skill}}
+                <a class="detail-item  roll-button" title="{{localize 'ps.actions.dialog.attackTest'}}" data-action="actionRollAttack">
+                    <i class="fas fa-crosshairs"></i> {{lookup ../skillList action.attack.skill}} {{#if action.attack.mod}}({{numberFormat action.attack.mod sign=true}}){{/if}}
+                </a>
+                {{/if}}
+
+                {{#if action.damage.formula}}
+                <a class="detail-item  roll-button" title="{{localize 'ps.actions.dialog.damageFormula'}}" data-action="actionRollDamage">
+                    <i class="fas fa-dice-d6"></i> {{action.damage.formula}} {{#if action.damage.type}}({{lookup ../damageTypes action.damage.type}}){{/if}}
+                </a>
+                {{/if}}
+            </div>
+            
+            <div class="card-content">
+                <div class="action-description">{{action.description}}</div>
+            </div>
+            
+            <div class="card-footer">
+                {{#if action.save.skill}}
+                <span>
+                    <i class="fas fa-shield-alt"></i> {{lookup ../skillList action.save.skill}} {{#if action.save.dc}}(CD {{action.save.dc}}){{/if}} 
+                </span>
+                {{/if}}
+            
+                <div class="item-controls">
+                    <a class="item-control item-edit" title="{{localize 'ps.dialog.edit'}}" data-action="actionEdit"><i class="fas fa-edit"></i></a>
+                    <a class="item-control item-delete" title="{{localize 'ps.dialog.delete'}}" data-action="actionDelete"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="no-actions-message">
+            <h4>{{localize "ps.actions.none"}}</h4>
+        </div>
+        {{/each}}
+    </div>
+
+</section>

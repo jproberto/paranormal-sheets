@@ -1,0 +1,19 @@
+<form>
+    <div class="form-group">
+        <label>{{localize "ps.damage.type"}}</label>
+        {{#if isEdit}}
+            <input type="text" name="type" value="{{localize currentTypeKey}}" disabled />
+        {{else}}
+            <select name="type">
+                {{{selectOptions availableTypes selected=currentType}}}
+            </select>
+        {{/if}}
+    </div>
+
+    {{#if showValueField}}
+    <div class="form-group">
+        <label>{{localize "ps.value"}}</label>
+        <input type="number" name="value" value="{{currentValue}}" />
+    </div>
+    {{/if}}
+</form>

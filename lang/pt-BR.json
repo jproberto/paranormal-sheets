@@ -1,0 +1,148 @@
+{
+    "ps": {
+        "threat": {
+            "label": "Ameaça",
+            "tab": {
+                "traits": "Traços",
+                "actions": "Ações",
+                "inventory": "Inventário",
+                "details": "Detalhes"                
+            },
+            "health": "Saúde",
+            "sanity": "Sanidade"
+        },
+        "dialog": {
+            "add": "Adicionar",
+            "cancel": "Cancelar",
+            "save": "Salvar",
+            "delete": "Excluir"
+        },
+        "damage": {
+            "type": "Tipo de Dano",
+            "cutting": "Corte",
+            "impact": "Impacto",
+            "piercing": "Perfurante",
+            "ballistic": "Balístico",
+            "knowledge": "Conhecimento",
+            "blood": "Sangue",
+            "energy": "Energia",
+            "death": "Morte",
+            "fear": "Medo",
+            "electricity": "Eletricidade",
+            "fire": "Fogo",
+            "cold": "Frio",
+            "mental": "Mental",
+            "chemical": "Químico"
+        },
+        "resistances": {
+          "label": "Resistências",
+          "add": "Adicionar Resistência a Dano",
+          "edit": "Editar Resistência a Dano",
+          "none": "Nenhuma resistência"
+        },
+        "vulnerabilities": {
+          "label": "Vulnerabilidades",
+          "add": "Adicionar Vulnerabilidade a Dano",
+          "none": "Nenhuma vulnerabilidade"
+        },
+        "immunities": {
+          "label": "Imunidades",
+          "add": "Adicionar Imunidade a Dano",
+          "none": "Nenhuma imunidade"
+        },
+        "value": "Valor",
+        "traits": {
+          "defensive": "Traços Defensivos"
+        },
+        "senses": {
+          "label": "Sentidos",
+          "column": "Sentidos",
+          "range": "Alcance",
+          "add": "Adicionar Sentido",
+          "none": "Nenhum sentido",
+          "type": "Sentido",
+          "blindsight": "Percepção às cegas",
+          "darkvision": "Visão no escuro",
+          "scent": "Faro"
+        },
+        "range": {
+          "short": "Curto (9m)",
+          "medium": "Médio (18m)",
+          "long": "Longo (36m)",
+          "extreme": "Extremo (90m)"
+        },
+        "movement": {
+          "label": "Deslocamento",
+          "land": "Terrestre",
+          "fly": "Voo",
+          "swim": "Natação",
+          "climb": "Escalada"
+        },
+        "skills": {
+          "label": "Perícias",
+          "others": {
+            "none": "Nenhuma outra Perícia"
+          }
+        },
+        "actions": {
+            "label": "Ações",
+            "add": "Adicionar Ação",
+            "none": "Nenhuma ação",
+            "dialog": {
+                "titleCreate": "Criar Nova Ação",
+                "name": "Nome da Ação",
+                "type": "Tipo de Ação",
+                "description": "Descrição",
+                "attackHeader": "Ataque",
+                "attackTest": "Teste",
+                "modifier": "Bônus Extra",
+                "damageFormula": "Dano",
+                "damageType": "Tipo",
+                "saveHeader": "Salvamento",
+                "saveSkill": "Perícia de Salvamento",
+                "saveDC": "CD"
+            },
+            "type": {
+              "standard": "Padrão",
+              "movement": "Movimento",
+              "complete": "Completa",
+              "passive": "Passiva"
+            },
+            "roll": {
+              "attack": "Rolar Teste de Ataque",
+                "damage": "Rolar Dano",
+                "requestSave": "Solicitar Teste de Salvamento",
+                "save": "Salvamento",
+                "flavor": "Teste de {action} ({skill})",
+                "title": "Teste de {action}"
+            },
+            "notifications": {
+                "saveRequestSent": "Pedido de salvamento de {skill} (CD {dc}) enviado para: {targets}.",
+                "saveRequestTitle": "Teste de Salvamento Requisitado",
+                "usedAction": "usou",
+                "saveInstruction": "Você precisa fazer um teste de {skill} contra uma Dificuldade {dc}."
+            },
+            "warnings": {
+                "nameRequired": "O nome da ação é obrigatório.",
+                "skillNotFound": "Perícia \"{skill}\" não encontrada no ator.",
+                "noDamageFormula": "Esta ação não possui uma fórmula de dano.",
+                "noSaveSkill": "Esta ação não possui uma perícia de salvamento definida.",
+                "noTargets": "Nenhum alvo selecionado para solicitar o salvamento.",
+                "noCharacterForSave": "Você precisa ter um personagem selecionado para fazer uma rolagem de salvamento.",
+                "saveCancelled": "Rolagem de salvamento cancelada."
+            },
+            "request": {
+                "title": "Salvamento: {action}",
+                "gmNote": "Requer um teste de {skill} contra seu ataque {action}.",
+                "flavor": "{actor} usa {action}!",
+                "success": "Passou no teste de salvamento!",
+                "failure": "Falhou no teste de salvamento!"
+            }
+        },
+        "none": "Nenhum",
+        "example": "Ex:"
+    },
+    "inventory": {
+      "newItem": "Novo item"
+    }
+}

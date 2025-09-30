@@ -1,0 +1,66 @@
+<form class="paranormal-threat-sheet">
+    <div class="form-group">
+        <label>{{localize "ps.actions.dialog.name"}}</label>
+        <input type="text" name="name" value="{{action.name}}"/>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "ps.actions.dialog.type"}}</label>
+        <select name="type">
+            {{{selectOptions actionTypes selected=action.type}}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "ps.actions.dialog.description"}}</label>
+        <textarea name="description" rows="4">{{action.description}}</textarea>
+    </div>
+
+    <hr/>
+    <h3 class="actor-title-header">{{localize "ps.actions.dialog.attackHeader"}}</h3>
+
+    <div class="grid grid-2col">
+        <div class="form-group">
+            <label>{{localize "ps.actions.dialog.attackTest"}}</label>
+            <select name="attack.skill">
+                <option value="">{{localize "ps.none"}}</option>
+                {{{selectOptions skillList selected=action.attack.skill}}}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>{{localize "ps.actions.dialog.modifier"}}</label>
+            <input type="number" name="attack.mod" value="{{action.attack.mod}}" placeholder="{{localize 'ps.example'}} 5"/>
+        </div>
+    </div>
+
+    <div class="grid grid-2col">
+        <div class="form-group">
+            <label>{{localize "ps.actions.dialog.damageFormula"}}</label>
+            <input type="text" name="damage.formula" value="{{action.damage.formula}}" placeholder="{{localize 'ps.example'}} 2d6+4"/>
+        </div>
+        <div class="form-group">
+            <label>{{localize "ps.actions.dialog.damageType"}}</label>
+            <select name="damage.type">
+                <option value="">{{localize "ps.none"}}</option>
+                {{{selectOptions damageTypes selected=action.damage.type}}}
+            </select>
+        </div>
+    </div>
+
+    <hr/>
+    <h3 class="actor-title-header">{{localize "ps.actions.dialog.saveHeader"}}</h3>
+
+    <div class="grid grid-2col">
+        <div class="form-group">
+            <label>{{localize "ps.actions.dialog.saveSkill"}}</label>
+            <select name="save.skill">
+                <option value="">{{localize "ps.none"}}</option>
+                {{{selectOptions skillList selected=action.save.skill}}}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>{{localize "ps.actions.dialog.saveDC"}}</label>
+            <input type="number" name="save.dc" value="{{action.save.dc}}" placeholder="{{localize 'ps.example'}} 5"/>
+        </div>
+    </div>
+</form>

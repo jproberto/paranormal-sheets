@@ -1,0 +1,49 @@
+{
+  "id": "paranormal-sheets",
+  "title": "JP's Paranormal Sheets",
+  "description": "Replaces the default Threat sheet template for a customized version.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "JP Roberto",
+      "flags": {
+        "github": "jproberto"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "paranormal-sheets.js"
+  ],
+  "styles": [
+    "systems/ordemparanormal/css/ordemparanormal.css",
+    "modules/paranormal-sheets/paranormal-sheets.css"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "ordemparanormal",
+        "type": "required",
+        "compatibility": {}
+      }
+    ]
+  },
+  "url": "",
+  "manifest": "",
+  "download": ""
+}

@@ -1,0 +1,112 @@
+<header class="sheet-header-op">
+    <div class="header-identify align-center">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64" />
+        <div>
+            <h1 class="charname">
+                <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'op.ThreatNamePlaceholder'}}" />
+            </h1>
+            <div class="disturbing-presence-summary">
+                <div>
+                    <label class="resource-label">
+                        {{localize "op.ThreatDisturbingPresence"}}: {{localize "op.ThreatDT"}}
+                    </label>
+                    <input type="number" name="flags.paranormal-sheets.disturbingPresence.dt" value="{{ps.disturbingPresence.dt}}" />
+                </div>
+                <div>
+                    <label class="resource-label">
+                        {{localize "op.ThreatMentalDamage"}}:
+                    </label>
+                    <input type="text" name="flags.paranormal-sheets.disturbingPresence.mentalDamage" value="{{ps.disturbingPresence.mentalDamage}}" />
+                </div>
+                <div>
+                    <label class="resource-label">
+                        {{localize "op.ThreatImmuneNex"}}:
+                    </label>
+                    <input type="number" name="flags.paranormal-sheets.disturbingPresence.immuneNex" value="{{ps.disturbingPresence.immuneNex}}" />
+                    <span>%</span>
+                </div>
+            </div>
+        </div>
+        <div class="resource flex-group-center progress">
+            <label class="resource-label">{{localize "op.ThreatVD"}}</label>
+            <div class="resource-content flexrow flex-center flex-between">
+                <input type="number" name="flags.paranormal-sheets.vd" value="{{ps.vd}}" />
+            </div>
+        </div>
+    </div>
+
+    <div class="header-fields">
+        <div class="resources grid grid-3col">
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.ThreatHP"}}</label>
+                <div class="resource-content flexrow">
+                    <input type="number" name="flags.paranormal-sheets.hp.current" value="{{ps.hp.current}}" />
+                    <span>/</span>
+                    <input type="number" name="flags.paranormal-sheets.hp.max" value="{{ps.hp.max}}" />
+                </div>
+            </div>
+
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "ps.threat.sanity"}}</label>
+                <div class="resource-content flexrow">
+                    <input type="number" name="flags.paranormal-sheets.san.current" value="{{ps.san.current}}" />
+                    <span>/</span>
+                    <input type="number" name="flags.paranormal-sheets.san.max" value="{{ps.san.max}}" />
+                </div>
+            </div>
+
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.ThreatDefense"}}</label>
+                <div class="resource-content flexrow">
+                    <input type="number" name="flags.paranormal-sheets.defense" value="{{ps.defense}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="movement">
+        <div class="resources grid grid-4col">
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "ps.movement.land"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.movement.land" value="{{ps.movement.land}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "ps.movement.fly"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.movement.fly" value="{{ps.movement.fly}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "ps.movement.swim"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.movement.swim" value="{{ps.movement.swim}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "ps.movement.climb"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.movement.climb" value="{{ps.movement.climb}}" />
+            </div>
+        </div>
+    </div>
+
+    <div class="attributes">
+        <div class="resources grid grid-5col">
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.AttributeDex"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.attributes.dexterity" value="{{ps.attributes.dexterity}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.AttributeStr"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.attributes.strength" value="{{ps.attributes.strength}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.AttributeInt"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.attributes.intelligence" value="{{ps.attributes.intelligence}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.AttributePre"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.attributes.presence" value="{{ps.attributes.presence}}" />
+            </div>
+            <div class="resource flex-group-center">
+                <label class="resource-label">{{localize "op.AttributeVit"}}</label>
+                <input class="resource-content" type="number" name="flags.paranormal-sheets.attributes.vitality" value="{{ps.attributes.vitality}}" />
+            </div>
+        </div>
+    </div>
+</header>

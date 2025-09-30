@@ -1,0 +1,154 @@
+<section class="tab traits active" data-group="primary" data-tab="traits">
+    <div class="grid grid-2col p-side-10">
+        <div class="senses">
+            <ol class="items-list">
+                <li class="item flexrow items-header">
+                    <div class="item-name">{{localize "ps.senses.column"}}</div>
+                    <div class="item-formula"></div> 
+                    <div class="item-controls">
+                        <a class="item-control item-create" title={{localize "ps.senses.add"}} data-action="senseCreate">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </li>
+                
+                {{#each ps.senses as |sen|}}
+                <li class="item flexrow" data-index="{{sen.index}}">
+                    <div class="item-name"><h4>{{sen.type}}</h4></div>
+                    <div class="item-formula item-prop">{{sen.range}}</div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title={{localize "ps.dialog.edit"}} data-action="senseEdit"><i class="fas fa-edit"></i></a>
+                        <a class="item-control" data-action="senseDelete" title={{localize "ps.dialog.delete"}}><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="item flexrow">
+                    <div class="item-name"><h4>{{localize "ps.senses.none"}}</h4></div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+        
+        <div class="vulnerabilities">
+            <ol class="items-list">
+                <li class="item flexrow items-header">
+                    <div class="item-name">{{localize "ps.vulnerabilities.label"}}</div>
+                    <div class="item-controls">
+                        <a class="item-control item-create" title={{localize "ps.vulnerabilities.add"}} data-action="vulnerabilityCreate"><i class="fas fa-plus"></i></a>
+                    </div>
+                </li>
+                
+                {{#each ps.vulnerabilities as |vul|}}
+                <li class="item flexrow" data-index="{{vul.index}}">
+                    <div class="item-name"><h4>{{vul.type}}</h4></div>
+                    <div class="item-controls">
+                        <a class="item-control" data-action="vulnerabilityDelete" title={{localize "ps.dialog.delete"}}><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="item flexrow">
+                    <div class="item-name"><h4>{{localize "ps.vulnerabilities.none"}}</h4></div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+
+    <div class="grid grid-2col p-side-10">
+       <div class="immunities">
+            <ol class="items-list">
+                <li class="item flexrow items-header">
+                    <div class="item-name">{{localize "ps.immunities.label"}}</div>
+                    <div class="item-controls">
+                        <a class="item-control item-create" title={{localize "ps.immunities.add"}} data-action="immunityCreate"><i class="fas fa-plus"></i></a>
+                    </div>
+                </li>
+                
+                {{#each ps.immunities as |imm|}}
+                <li class="item flexrow" data-index="{{imm.index}}">
+                    <div class="item-name"><h4>{{imm.type}}</h4></div>
+                    <div class="item-controls">
+                        <a class="item-control" data-action="immunityDelete" title={{localize "ps.dialog.delete"}}><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="item flexrow">
+                    <div class="item-name"><h4>{{localize "ps.immunities.none"}}</h4></div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+
+        <div class="resistances">
+            <ol class="items-list">
+                <li class="item flexrow items-header">
+                    <div class="item-name">{{localize "ps.resistances.label"}}</div>
+                    <div class="item-controls">
+                        <a class="item-control item-create" title={{localize "ps.resistances.add"}} data-action="resistanceCreate"><i class="fas fa-plus"></i></a>
+                    </div>
+                </li>
+
+                {{#each ps.resistances as |res|}}
+                <li class="item flexrow" data-index="{{res.index}}">
+                    <div class="item-name"><h4>{{res.type}}</h4></div>
+                    <div class="item-formula item-prop">{{res.value}}</div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title={{localize "ps.dialog.edit"}} data-action="resistanceEdit"><i class="fas fa-edit"></i></a>
+                        <a class="item-control" data-action="resistanceDelete" title={{localize "ps.dialog.delete"}}><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="item flexrow">
+                    <div class="item-name"><h4>{{localize "ps.resistances.none"}}</h4></div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+
+    <div class="skills-section">
+        <h3 class="actor-title-header section-header">
+            <span>{{localize "ps.skills.label"}}</span>
+            <a class="item-control item-create" title="{{localize 'ps.skills.add'}}" data-action="skillCreate">
+                <i class="fas fa-plus"></i>
+            </a>
+        </h3>
+
+        <div class="grid grid-2col">
+            <div class="fixed-skills">
+                <ol class="items-list">
+                    {{#each fixedSkills as |skill key|}}
+                    <li class="item flexrow" data-skill-id="{{key}}">
+                        <div class="item-name rollable" data-action="skillRoll" data-key="{{key}}" data-rollType="skill">
+                            {{skill.label}}
+                        </div>
+                        <input type="text" name="system.skills.{{key}}.mod" value="{{skill.mod}}" data-dtype="Number" class="modifier skill-modifier"/>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            <div class="other-skills">
+                <ol class="items-list">
+                    {{#each otherSkills as |skill key|}}
+                    <li class="item flexrow" data-skill-id="{{key}}">
+                        <div class="item-name rollable" data-action="skillRoll" data-key="{{key}}" data-rollType="skill">
+                            {{skill.label}}
+                        </div>
+                        <input type="text" name="system.skills.{{key}}.mod" value="{{skill.mod}}" data-dtype="Number" class="modifier skill-modifier"/>
+                        <div class="item-controls">
+                            <a class="item-control" data-action="skillDelete" title={{localize "ps.dialog.delete"}}><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    {{else}}
+                    <li class="item flexrow">
+                        <div class="item-name">
+                            <h4>{{localize "ps.skills.others.none"}}</h4>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+        </div>
+    </div>  
+</section>

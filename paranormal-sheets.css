@@ -1,0 +1,443 @@
+/* ############################################################# */
+/* #     SELF-CONTAINED STYLES FOR PARANORMAL THREAT SHEET     # */
+/* ############################################################# */
+
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap');
+
+.paranormal-threat-sheet {
+  background: url("../../../systems/ordemparanormal/media/parchment.jpg") repeat;
+  color: #222;
+  font-family: "Signika", sans-serif;
+  overflow-x: hidden;
+  --color-text-primary: #333;
+  --color-text-secondary: #333;
+  --color-text-emphatic: #333;
+}
+
+.paranormal-threat-sheet .window-content, .paranormal-threat-sheet {
+  background: #eeede0;
+}
+
+.paranormal-threat-sheet input, 
+.paranormal-threat-sheet select {
+  color: #222 !important;
+  text-align: center;
+  font-family: "Signika", sans-serif;
+  background-color: #0000001a;
+  border: 1px solid #666;
+  border-radius: 3px;
+}
+
+.paranormal-threat-sheet h1.charname input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 1px solid #666;
+  font-size: 32px;
+  font-family: "Signika", sans-serif; 
+  font-weight: 700;
+  padding: 0 10px;
+  background-color: #0000001a;
+}
+
+.paranormal-threat-sheet .grid,
+.paranormal-threat-sheet .grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.paranormal-threat-sheet .grid-3col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.paranormal-threat-sheet .grid-4col {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.paranormal-threat-sheet .grid-5col {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.paranormal-threat-sheet .flex-group-center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.paranormal-threat-sheet .flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.paranormal-threat-sheet .flex-center {
+    justify-content: center;
+}
+
+.paranormal-threat-sheet .flex-between {
+  justify-content: space-between;
+}
+
+.paranormal-threat-sheet .sheet-header-op {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.paranormal-threat-sheet .profile-img {
+  flex: 0 0 64px;
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+  border: none;
+}
+
+.paranormal-threat-sheet h1.charname {
+  height: 45px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+}
+
+.paranormal-threat-sheet .resource {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paranormal-threat-sheet .resource-label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.paranormal-threat-sheet .resource-content {
+  display: flex;
+  align-items: center;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 2px;
+  background-color: #0000001a;
+}
+
+.paranormal-threat-sheet .resource-content input {
+    background: transparent;
+    border: none;
+}
+
+.paranormal-threat-sheet .attributes .resource-content {
+    height: 28px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.paranormal-threat-sheet .sheet-tabs {
+  flex: 0;
+  border-bottom: 1px solid #b5b3a4;
+}
+
+.paranormal-threat-sheet .tabs .item {
+    line-height: 28px;
+    padding: 2px 10px;
+    border-top: 1px solid #b5b3a4;
+    border-left: 1px solid #b5b3a4;
+    border-right: 1px solid #b5b3a4;
+    background: #e5e1d5;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6a6a6a;
+}
+.paranormal-threat-sheet .tabs .item.active {
+    text-shadow: 0 0 10px var(--color-shadow-primary);
+    border-bottom: 1px solid #eeede0;
+}
+
+.paranormal-threat-sheet nav.tabs a.item[data-tab] {
+    color: #6a6a6a;
+}
+
+.paranormal-threat-sheet .sheet-body .tab {
+  padding-top: 10px;
+}
+
+/* Style update for Section Headers */
+.paranormal-threat-sheet .actor-title-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.paranormal-threat-sheet .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.paranormal-threat-sheet .form-group label {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.paranormal-threat-sheet .form-group input {
+  height: 25px;
+  text-align: left;
+  padding: 0 5px;
+}
+
+.paranormal-threat-sheet .p-side-10 {
+  padding: 0 10px;
+}
+
+.paranormal-threat-sheet .editor {
+    border: 1px solid #b5b3a4;
+    min-height: 100px;
+}
+
+/* Your custom layout styles */
+.paranormal-threat-sheet .header-identify {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px; 
+    align-items: center;
+}
+
+.paranormal-threat-sheet .disturbing-presence-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.paranormal-threat-sheet .disturbing-presence-summary .resource-label {
+    font-size: 9px;
+}
+
+.paranormal-threat-sheet .disturbing-presence-summary input {
+    width: 40px;
+    height: 18px;
+    font-size: 10px;
+    padding: 1px;
+}
+
+.paranormal-threat-sheet .header-fields .resources {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 0.8fr;
+}
+
+.paranormal-threat-sheet .attributes .resources {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.paranormal-threat-sheet .header-fields .resource-content.flexrow {
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    background-color: #0000001a;
+    height: 28px;
+}
+
+.paranormal-threat-sheet .header-fields .resource-content.flexrow input {
+    flex: 0 1 45px;
+    width: 45px;
+    background: transparent;
+    border: none;
+}
+
+.paranormal-threat-sheet .resource-compact .resource-content {
+    width: 80px; 
+    margin: 0 auto; 
+}
+
+.paranormal-threat-sheet .items-list .item-controls {
+    flex-basis: 50px;
+}
+
+/* Regra para a linha inteira da perícia (o <li>) */
+.paranormal-threat-sheet .skills-section .item {
+  gap: 5px; /* Adiciona um pequeno espaço entre os elementos */
+}
+
+/* Regra para o nome da perícia */
+.paranormal-threat-sheet .skills-section .item .item-name {
+  flex: 1; /* Permite que o nome ocupe o espaço restante */
+  text-align: left; /* Alinha o nome à esquerda para melhor leitura */
+  font-weight: bold;
+}
+
+/* Regra específica e final para o input */
+.paranormal-threat-sheet .skills-section .item .modifier.skill-modifier {
+  flex: 0 0 45px; /* Não cresce, não encolhe, base de 45px. Ajuste o valor conforme necessário. */
+  text-align: center;
+  padding: 2px;
+  height: 24px;
+}
+
+.paranormal-threat-sheet .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+  margin: 2px 0;
+  padding: 0 8px; /* Adiciona um pouco de padding */
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+
+.paranormal-threat-sheet .section-header h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.paranormal-threat-sheet .section-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0 8px; 
+
+  height: 28px;
+  margin: 2px 0;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+
+/* Container da Grade de Ações */
+.paranormal-threat-sheet .actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Cria as duas colunas */
+  gap: 10px; /* Espaçamento entre os cards */
+  padding-top: 10px;
+}
+
+/* Estilo Individual do Card de Ação */
+.paranormal-threat-sheet .action-card {
+  border: 1px solid #b5b3a4;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 8px;
+  height: 200px; /* Altura fixa do card. Ajuste conforme necessário. */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer; /* Indica que o card é clicável */
+}
+
+.paranormal-threat-sheet .action-card:hover {
+  border-color: #8f8c7b;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Cabeçalho do Card (Nome e Tipo) */
+.paranormal-threat-sheet .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  flex-shrink: 0; /* Impede que o cabeçalho encolha */
+}
+
+.paranormal-threat-sheet .action-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.paranormal-threat-sheet .action-type {
+  font-size: 11px;
+  font-style: italic;
+  color: #555;
+}
+
+.paranormal-threat-sheet .card-content {
+  flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+  overflow-y: auto; /* Adiciona o scroll vertical QUANDO necessário */
+  min-height: 0; /* Correção de bug do flexbox com overflow */
+}
+
+.paranormal-threat-sheet .action-description {
+  font-size: 13px;
+  white-space: pre-wrap; /* Preserva quebras de linha e espaços */
+}
+
+/* Mensagem de "Nenhuma Ação" */
+.paranormal-threat-sheet .no-actions-message {
+    grid-column: span 2; /* Faz a mensagem ocupar as duas colunas */
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.paranormal-threat-sheet .card-footer {
+    margin-top: auto;
+    padding-top: 5px;
+    border-top: 1px solid #ccc;
+    
+    /* A Mágica do Flexbox */
+    display: flex;
+    justify-content: space-between; /* Empurra os filhos para os extremos opostos */
+    align-items: center;
+}
+
+.paranormal-threat-sheet .card-details {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha se não houver espaço */
+  gap: 8px; /* Espaçamento entre os detalhes */
+  font-size: 11px;
+  color: #444;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.paranormal-threat-sheet .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Espaço entre o ícone e o texto */
+  background-color: rgba(0,0,0,0.05);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.paranormal-threat-sheet .detail-item.rollable {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.paranormal-threat-sheet .detail-item.rollable:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+/* Estilo para os novos botões de rolagem */
+.paranormal-threat-sheet .roll-button {
+    font-size: 11px;
+    background: rgba(0,0,0,0.05);
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin-right: 4px; /* Espaço entre os botões */
+    white-space: nowrap; /* Impede que o texto quebre linha */
+}
+
+.paranormal-threat-sheet .roll-button i {
+    margin-right: 3px;
+}

@@ -1,0 +1,19 @@
+<form>
+    <div class="form-group">
+        <label>{{localize "ps.senses.type"}}</label>
+        {{#if isEdit}}
+            <input type="text" name="type" value="{{localize currentTypeKey}}" disabled />
+        {{else}}
+            <select name="type">
+                {{{selectOptions availableTypes selected=currentType}}}
+            </select>
+        {{/if}}
+    </div>
+    
+    <div class="form-group">
+        <label>{{localize "ps.senses.range"}}</label>
+        <select name="range">
+            {{{selectOptions rangeTypes selected=currentRangeKey}}}
+        </select>
+    </div>
+</form>
