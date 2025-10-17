@@ -68,7 +68,8 @@ export class ParanormalThreatSheet extends api.HandlebarsApplicationMixin(sheets
             onMarkItem: this._onMarkItem,
             onRoll: this._onRoll,
             increase: this._onIncrease,
-            decrease: this._onDecrease
+            decrease: this._onDecrease,
+			editImage: this._onEditImage
         },
         form: {
 			submitOnChange: true
@@ -500,5 +501,25 @@ export class ParanormalThreatSheet extends api.HandlebarsApplicationMixin(sheets
         const newValue = Math.max(0, currentValue + step);
 
         await item.update({ [property]: newValue });
+	}
+	
+	async _onEditImage(event, target) {
+		log("_onEditImage");
+		const attr = target.dataset.edit;
+		const current = foundry.utils.getProperty(this.document, attr);
+		const { img } =
+	    this.document.constructor.getDefaultArtwork?.(this.document.toObject()) ??
+	    {};
+		const fp = new FilePicker({
+			current,
+			type: 'image',
+			redirectToRoot: img ? [img] : [],
+			callback: (path) => {
+				this.document.update({ [attr]: path });
+			},
+			top: this.position.top + 40,
+			left: this.position.left + 10,
+		});
+		return fp.browse();
 	}
 }

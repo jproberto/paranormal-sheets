@@ -55,7 +55,9 @@ Hooks.once('setup', () => {
         standard: "ps.actions.type.standard",
         movement: "ps.actions.type.movement",
         complete: "ps.actions.type.complete",
-        passive: "ps.actions.type.passive"
+        passive: "ps.actions.type.passive",
+        free: "ps.actions.type.free",
+        reaction: "ps.actions.type.reaction"
     }
 
     CONFIG.paranormalSheets = {

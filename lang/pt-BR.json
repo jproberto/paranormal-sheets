@@ -106,7 +106,9 @@
               "standard": "Padrão",
               "movement": "Movimento",
               "complete": "Completa",
-              "passive": "Passiva"
+              "passive": "Passiva",
+              "free": "Livre",
+              "reaction": "Reação"
             },
             "roll": {
               "attack": "Rolar Teste de Ataque",
