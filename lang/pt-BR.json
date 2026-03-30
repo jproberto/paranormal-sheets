@@ -45,6 +45,9 @@
           "add": "Adicionar Vulnerabilidade a Dano",
           "none": "Nenhuma vulnerabilidade"
         },
+        "conditions": {
+          "label": "Condições"
+        },
         "immunities": {
           "label": "Imunidades",
           "add": "Adicionar Imunidade a Dano",

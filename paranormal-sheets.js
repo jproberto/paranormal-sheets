@@ -72,6 +72,32 @@ Hooks.once('ready', () => {
     log("Ready!");
 });
 
+Hooks.on("renderActorSheetV2", async (app, html, data) => {
+    if (app.document.type !== "agent") return;
+
+    const container = html.querySelector(".header-fields");
+    if (!container) return;
+
+    const templateData = {
+        ...data,
+        "flags.paranormal-sheets": app.document.flags['paranormal-sheets'] || {}
+    };
+
+    const templatePath = "modules/paranormal-sheets/templates/agent/resistancesAndConditions.hbs";
+    const renderedHtml = await renderTemplate(templatePath, templateData);
+    container.insertAdjacentHTML('beforeend', renderedHtml);
+
+    html.querySelectorAll('textarea[name^="flags.paranormal-sheets"]').forEach(textarea => {
+        textarea.addEventListener('change', async (event) => {
+            const field = event.target.name;
+            const value = event.target.value;
+
+            await app.document.update({ [field]: value });
+            log(`Dados salvos em ${field}`);
+        });
+    });
+});
+
 function defineThreatDataModel() {
     const agentSkills = game.system.template.Actor.agent.skills;
 
